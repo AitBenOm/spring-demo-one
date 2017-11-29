@@ -1,0 +1,23 @@
+package com.AitBenOm.springdemo;
+
+public class BaseballCoach implements Coach {
+
+    // define a private field for the dependency
+    private FortuneService fortuneService;
+
+    //define a constructor for dependency injection
+    public BaseballCoach(FortuneService theFortuneService) {
+        fortuneService=theFortuneService;
+    }
+
+    public String getDailyWorkout(){
+       return("Spend 30mn on batting");
+    }
+
+
+
+    @Override
+    public String getDailyFortune() {
+        return fortuneService.getFortune();
+    }
+}
