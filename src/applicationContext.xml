@@ -8,4 +8,10 @@
     </bean>
 
     <bean id="myFortune" class="com.AitBenOm.springdemo.HappyFortuneService" ></bean>
+
+    <bean id="myCricketCoach" class="com.AitBenOm.springdemo.CricketCoach">
+    <property name="fortuneService" ref="myFortune"/>
+    <property name="email" value="omar.benaissa@outlook.com"/>
+    <property name="team" value="FCB"/>
+    </bean>
 </beans>
